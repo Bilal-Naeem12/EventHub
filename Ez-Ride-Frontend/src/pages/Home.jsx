@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex flex-col gap-5 flex-wrap w-full  justify-start items-center sm:items-start sm:flex-row">
           {events.map(
             (item, i) =>
-              i <= 4 && <UpcomingCard src={item.src} name={item.name} />
+              i <= 4 && <UpcomingCard key={item.name}  src={item.src} name={item.name} />
           )}
         </div>
       </div>
@@ -29,7 +29,7 @@ export default function Home() {
         <div className="flex flex-col gap-5 flex-wrap w-full  justify-start items-center sm:items-start sm:flex-row">
           {events.map(
             (item, i) =>
-              i <= 4 && <UpcomingCard src={item.src} name={item.name} />
+              i <= 4 && <UpcomingCard key={item.name} src={item.src} name={item.name} />
           )}
         </div>
       </div>

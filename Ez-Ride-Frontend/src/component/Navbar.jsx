@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
+import SendIcon from '@mui/icons-material/Send';
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Dashboard', href: '/', current: false },
@@ -28,16 +29,16 @@ const toggleSearchBar = () => {
 };
 
   return (
-    <>{
+    <>
       <div className={`fixed  ${isSearchVisible ? '-translate-y-[100%]' : 'translate-y-[110%]'}  left-[5%] p-5 sm:p-8 md:p-10 rounded-lg w-[90%] md:w-[24%]  bg-white md:left-[40%] z-[99] transition-transform duration-300 ease-in-out`}>
-        <div className='bg-white rounded-md shadow flex justify-center items-center  '>
-       
+        <div className='bg-white rounded-md  flex justify-center items-center  '>
+            <SearchSharpIcon color='primary' className='relative text-[2.35rem] me-5 '/>
             <TextField fullWidth label="Search With Event ID" id="search" />
-    
+       
         </div>
       </div>
       
-    }
+    
 {!isSearchVisible && <div onClick={()=>{setIsSearchVisible(true)}} className={`w-full h-full bg-black  fixed ${isSearchVisible ? 'opacity-0' : 'opacity-75'}  z-50 transition-transform duration-300 ease-in-out`}>
       
       </div>}
