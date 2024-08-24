@@ -30,6 +30,6 @@ function stringToColor(string) {
   }
 export default function CustomAvatar({str}) {
   return (
-    <div> <Avatar {...stringAvatar(str)}  variant="" /></div>
+    <div> <Avatar {...stringAvatar(str)} className='uppercase' variant="" /></div>
   )
 }

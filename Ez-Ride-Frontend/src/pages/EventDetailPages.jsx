@@ -21,6 +21,10 @@ export default function EventPage() {
 
   return (
     <Box sx={{ maxWidth: '1200px', mx: 'auto', mt: 4, p: 2 }}>
+        <Typography variant="h4" fontWeight={"bold"} className='text-center mb-10'>
+     Event <span className="text-orange-400 font-extrabold">Details </span>
+    </Typography>
+   
       <Grid container spacing={4}>
         {/* Left Column */}
         <Grid item xs={12} md={7}>
@@ -109,7 +113,7 @@ export default function EventPage() {
         </Grid>
 
         {/* Right Column */}
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={5} className=' sticky top-0'>
           <Paper elevation={3} sx={{ p: 3 }}>
             <img
               src="/images/event-banner.jpg" // Replace with the actual banner image path

@@ -1,8 +1,12 @@
 import React from 'react'
 import Dashboard from '../component/Dashboard'
+import MiniDashboard from '../component/MiniDashboard'
 
 export default function DashboardPage() {
   return (
-    <div><Dashboard/></div>
+    <div>
+         <MiniDashboard/>
+        
+        <Dashboard/></div>
   )
 }
