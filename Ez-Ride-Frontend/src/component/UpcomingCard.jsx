@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Skeleton from '@mui/material/Skeleton';
+import { Link } from 'react-router-dom';
 export default function UpcomingCard({src,name}) {
 const [loading, setloading] = useState(true)
 useEffect(() => {
@@ -14,12 +15,14 @@ useEffect(() => {
   return () => {
     setTimeout(() => {
         setloading(false)
-    }, 5000);
+    }, 3000);
   }
 }, [])
 
     return (
-        loading ? <Skeleton sx={{ maxWidth: 400 }}  variant="rectangular" className='min-w-[200px] w-full h-[300px] sm:h-[300px] sm:w-[23.33%] '/>:<Card sx={{ maxWidth: 345 }} className='min-w-[200px]  sm:w-[23.33%] hover:scale-110  cursor-pointer transition-all hover:text-gray-800'>
+        loading ? <Skeleton sx={{ maxWidth: 400 }}  variant="rectangular" className='min-w-[200px] w-full h-[300px] sm:h-[300px] sm:w-[23.33%] '/>:
+        <Link to={"/event/21"} className='min-w-[200px]  sm:w-[23.33%] hover:scale-110  cursor-pointer transition-all hover:text-gray-800'>
+        <Card sx={{ maxWidth: 345 }} >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -38,5 +41,6 @@ useEffect(() => {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Link>
   );
 }

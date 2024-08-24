@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import UpcomingCard from "../component/UpcomingCard";
 import { events } from "../data/homeCrousel";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className=" space-y-14 ">
       <HomeCarousel />
