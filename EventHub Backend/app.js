@@ -1,12 +1,13 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
+require('dotenv').config()
 const cookieParser = require('cookie-parser');
-
-
 const indexRouter = require('./src/routes/index');
 const usersRouter = require('./src/routes/users');
 const { connectDb } = require('./src/config/db');
+
+
 
 const app = express();
 const PORT = 3000
@@ -39,7 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 app.listen(PORT, async ( )=>{
-  console.log("server is listening at " +PORT);
+  console.log("server is listening at " +PORT + process.env.DBPASSWORD);
   await connectDb();
   
   })
