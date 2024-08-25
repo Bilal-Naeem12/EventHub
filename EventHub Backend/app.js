@@ -3,9 +3,9 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config()
 const cookieParser = require('cookie-parser');
-const indexRouter = require('./src/routes/index');
-const usersRouter = require('./src/routes/users');
-const { connectDb } = require('./src/config/db');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const { connectDb } = require('./config');
 
 
 
